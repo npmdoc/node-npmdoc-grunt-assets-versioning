@@ -1,0 +1,2011 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/theasta/grunt-assets-versioning">grunt-assets-versioning (v1.0.6)</a>
+</h1>
+<h4>Versioning static assets with Grunt</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning">module grunt-assets-versioning</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.grunt-assets-versioning">
+            function <span class="apidocSignatureSpan"></span>grunt-assets-versioning
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>abstractVersioner
+            <span class="apidocSignatureSpan">(options, taskData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.externalVersioner">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>externalVersioner
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.internalVersioner">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>internalVersioner
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.task">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>task
+            <span class="apidocSignatureSpan">(taskName, taskFiles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-assets-versioning.</span>abstractVersioner.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-assets-versioning.</span>externalVersioner.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-assets-versioning.</span>index</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-assets-versioning.</span>internalVersioner.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-assets-versioning.</span>task.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning.abstractVersioner">module grunt-assets-versioning.abstractVersioner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.abstractVersioner">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>abstractVersioner
+            <span class="apidocSignatureSpan">(options, taskData)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning.abstractVersioner.prototype">module grunt-assets-versioning.abstractVersioner.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.checkFilesObjValidity">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>checkFilesObjValidity
+            <span class="apidocSignatureSpan">(filesObj, filesMapIndex, filesMapLength)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.createPostVersioningTask">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>createPostVersioningTask
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.createPreVersioningSurrogateTask">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>createPreVersioningSurrogateTask
+            <span class="apidocSignatureSpan">(task)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.createSurrogateTask">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>createSurrogateTask
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.doVersion">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>doVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getAssetsVersioningTaskConfigKey">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getAssetsVersioningTaskConfigKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getAssetsVersioningTaskName">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getAssetsVersioningTaskName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getPostVersioningSurrogateTasks">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getPostVersioningSurrogateTasks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getPreVersioningSurrogateTasks">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getPreVersioningSurrogateTasks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getTargetTasks">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getTargetTasks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.initialize">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>initialize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.retrieveDestFiles">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>retrieveDestFiles
+            <span class="apidocSignatureSpan">(task)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.saveVersionsMap">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>saveVersionsMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.setSurrogateTasks">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>setSurrogateTasks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning.externalVersioner">module grunt-assets-versioning.externalVersioner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.externalVersioner.externalVersioner">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>externalVersioner
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning.externalVersioner.prototype">module grunt-assets-versioning.externalVersioner.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.constructor">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.createSurrogateTask">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>createSurrogateTask
+            <span class="apidocSignatureSpan">(updatedTaskFiles, task)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.doVersion">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>doVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.getPostVersioningSurrogateTasks">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>getPostVersioningSurrogateTasks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.getTargetTasks">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>getTargetTasks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.initialize">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>initialize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning.index">module grunt-assets-versioning.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.index.date">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.index.</span>date
+            <span class="apidocSignatureSpan">(src, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.index.hash">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.index.</span>hash
+            <span class="apidocSignatureSpan">(src, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning.internalVersioner">module grunt-assets-versioning.internalVersioner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.internalVersioner.internalVersioner">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>internalVersioner
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning.internalVersioner.prototype">module grunt-assets-versioning.internalVersioner.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype._copyOrConcat">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>_copyOrConcat
+            <span class="apidocSignatureSpan">(files)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.constructor">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.createSurrogateTask">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>createSurrogateTask
+            <span class="apidocSignatureSpan">(updatedTaskFiles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.doVersion">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>doVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.getPostVersioningSurrogateTasks">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>getPostVersioningSurrogateTasks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.getTargetTasks">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>getTargetTasks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.initialize">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>initialize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning.task">module grunt-assets-versioning.task</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.task.task">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>task
+            <span class="apidocSignatureSpan">(taskName, taskFiles)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-assets-versioning.task.prototype">module grunt-assets-versioning.task.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.task.prototype.createPostVersioningTask">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>createPostVersioningTask
+            <span class="apidocSignatureSpan">(filesObj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.task.prototype.createSurrogate">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>createSurrogate
+            <span class="apidocSignatureSpan">(filesObj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.task.prototype.getFiles">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>getFiles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.task.prototype.getTaskConfig">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>getTaskConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-assets-versioning.task.prototype.getTaskConfigKey">
+            function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>getTaskConfigKey
+            <span class="apidocSignatureSpan">(taskName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning" id="apidoc.module.grunt-assets-versioning">module grunt-assets-versioning</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.grunt-assets-versioning" id="apidoc.element.grunt-assets-versioning.grunt-assets-versioning">
+        function <span class="apidocSignatureSpan"></span>grunt-assets-versioning
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grunt-assets-versioning = function (grunt) {
+
+  var _fileGlobSync;
+  // Project configuration.
+  grunt.initConfig({
+    jsdoc : {
+      dist : {
+        src: ['tasks/**/*.js'],
+        options: {
+          destination: 'docs',
+          configure: 'jsdoc.conf.json'
+        }
+      }
+    },
+    jshint: {
+      all: [
+        'Gruntfile.js',
+        'tasks/**/*.js',
+        '&lt;%= nodeunit.tests %&gt;'
+      ],
+      options: {
+        jshintrc: '.jshintrc'
+      }
+    },
+
+    // Before generating any new files, remove any previously-created files.
+    clean: {
+      tests: ['tmp']
+    },
+
+    // Configuration to be run (and then tested).
+    assets_versioning: {
+      options_tag_date: {
+        options: {
+          tag           : 'date'
+        },
+        files: {
+          'tmp/js/js_bundle_a.js': ['test/fake/file1.js', 'test/fake/file2.js'],
+          'tmp/js/js_bundle_b.js': ['test/fake/file3.js', 'test/fake/file4.js']
+        }
+      },
+      options_dateFormat: {
+        options: {
+          tag           : 'date',
+          dateFormat: 'YYMMDDHHmmss',
+          timezoneOffset: 7
+        },
+        files: {
+          'tmp/js/js_bundle_a.js': ['test/fake/file1.js', 'test/fake/file2.js'],
+          'tmp/js/js_bundle_b.js': ['test/fake/file3.js', 'test/fake/file4.js']
+        }
+      },
+      options_timezoneOffset: {
+        options: {
+          tag           : 'date',
+          timezoneOffset: 7
+        },
+        files: {
+          'tmp/js/js_bundle_a.js': ['test/fake/file1.js', 'test/fake/file2.js'],
+          'tmp/js/js_bundle_b.js': ['test/fake/file3.js', 'test/fake/file4.js']
+        }
+      },
+      options_hashLength: {
+        options: {
+          hashLength: 16
+        },
+        files: {
+          'tmp/js/options_hashlength_a.js': ['test/fixtures/js/file1.js', 'test/fixtures/js/file2.js'],
+          'tmp/js/options_hashlength_b.js': ['test/fixtures/js/file3.js', 'test/fixtures/js/file4.js']
+        }
+      },
+      options_skipExisting_true: {
+        options: {
+          skipExisting: true
+        },
+        files: {
+          'tmp/skip_existing_true.js': ['test/fixtures/js/file1.js', 'test/fixtures/js/file2.js']
+        }
+      },
+      options_skipExisting_false: {
+        options: {
+          skipExisting: false
+        },
+        files: {
+          'tmp/skip_existing_false.js': ['test/fixtures/js/file1.js', 'test/fixtures/js/file2.js']
+        }
+      },
+      options_skipExisting_array: {
+        options: {
+          skipExisting: ['tmp/js/skip_existing_array_1.3d04f375.js']
+        },
+        files: {
+          'tmp/js/skip_existing_array_1.js': ['test/fixtures/js/file1.js', 'test/fixtures/js/file2.js'],
+          'tmp/js/skip_existing_array_2.js': ['test/fixtures/js/file3.js', 'test/fixtures/js/file4.js']
+        }
+      },
+      options_post_external: {
+        options: {
+          post: true,
+          tasks: [
+            'concat:options_post_1',
+            'concat:options_post_2'
+          ]
+        }
+      },
+      options_post_internal: {
+        options: {
+          post: true
+        },
+        files: [
+          { src: ['test/fixtures/js/file1.js', 'test/fixtures/js/file2.js'], dest: 'tmp/js/options_post_internal_a.js' },
+          { src: ['test/fixtures/js/file3.js', 'test/fixtures/js/file4.js'], dest: 'tmp/js/options_post_internal_b.js' }
+        ]
+      },
+      options_versionsMapFile: {
+        files: [{
+          expand : true,
+          cwd    : "test/fixtures/images/",
+          src    : ['**/*.png', '**/*.jpg', '**/*.gif'],
+          dest   : "tmp/options_output/"
+        }],
+        options: {
+          versionsMapFile     : 'tmp/options_output.json'
+        }
+      },
+      output_versionsMapTrimPath: {
+        files: [{
+          expand : true,
+          cwd    : "test/fixtures/images/",
+          src    : ['**/*.png', '**/*.jpg', '**/*.gif'],
+          dest   : "tmp/options_output_trim/"
+        }],
+        options: {
+          versionsMapFile     : 'tmp/options_output_trim.json',
+          versionsMapTrimPath : 'tmp/options_output_trim/'
+        }
+      },
+      options_versionsMapTemplate: {
+        file ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner" id="apidoc.element.grunt-assets-versioning.abstractVersioner">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>abstractVersioner
+        <span class="apidocSignatureSpan">(options, taskData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AbstractVersioner(options, taskData) {
+  this.options = options;
+  this.taskData = taskData;
+
+<span class="apidocCodeCommentSpan">  /**
+   * Map of versioned files
+   * @type {Array.&lt;{version, originalPath: string, versionedPath: string}&gt;}
+   */
+</span>  this.versionsMap = [];
+
+  /**
+   * Get one of the tagger functions: hash or date
+   * @type {function}
+   */
+  this.versionTagger = taggers[this.options.tag];
+
+  // is task a post versioning task?
+  this.isPostVersioningTask = grunt.config(this.getAssetsVersioningTaskConfigKey() + '.isPostVersioningTaskFor');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.externalVersioner" id="apidoc.element.grunt-assets-versioning.externalVersioner">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>externalVersioner
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">externalVersioner = function () {
+  return Parent.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.internalVersioner" id="apidoc.element.grunt-assets-versioning.internalVersioner">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>internalVersioner
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">internalVersioner = function () {
+  return Parent.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.task" id="apidoc.element.grunt-assets-versioning.task">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>task
+        <span class="apidocSignatureSpan">(taskName, taskFiles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">task = function (taskName, taskFiles) {
+  grunt.log.writeln("Versioning files from " + taskName + " task.");
+  this.taskName = taskName;
+
+  this.taskConfig = this.getTaskConfig();
+
+  if (!this.taskConfig) {
+    grunt.fail.warn("Task '" + this.taskName + "' doesn't exist or doesn't have any configuration.", 1);
+  }
+
+  this.taskFiles = taskFiles || this.getFiles();
+  if (!this.taskFiles || this.taskFiles.length === 0) {
+    grunt.fail.warn("Task '" + this.taskName + "' doesn't have any src-dest file mappings.", 1);
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning.abstractVersioner" id="apidoc.module.grunt-assets-versioning.abstractVersioner">module grunt-assets-versioning.abstractVersioner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.abstractVersioner" id="apidoc.element.grunt-assets-versioning.abstractVersioner.abstractVersioner">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>abstractVersioner
+        <span class="apidocSignatureSpan">(options, taskData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AbstractVersioner(options, taskData) {
+  this.options = options;
+  this.taskData = taskData;
+
+<span class="apidocCodeCommentSpan">  /**
+   * Map of versioned files
+   * @type {Array.&lt;{version, originalPath: string, versionedPath: string}&gt;}
+   */
+</span>  this.versionsMap = [];
+
+  /**
+   * Get one of the tagger functions: hash or date
+   * @type {function}
+   */
+  this.versionTagger = taggers[this.options.tag];
+
+  // is task a post versioning task?
+  this.isPostVersioningTask = grunt.config(this.getAssetsVersioningTaskConfigKey() + '.isPostVersioningTaskFor');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning.abstractVersioner.prototype" id="apidoc.module.grunt-assets-versioning.abstractVersioner.prototype">module grunt-assets-versioning.abstractVersioner.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.checkFilesObjValidity" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.checkFilesObjValidity">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>checkFilesObjValidity
+        <span class="apidocSignatureSpan">(filesObj, filesMapIndex, filesMapLength)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkFilesObjValidity = function (filesObj, filesMapIndex, filesMapLength) {
+  grunt.log.debug("Iterating through file mapping - " + ( filesMapIndex + 1 ) + "/" + filesMapLength);
+
+  var src = filesObj.src.filter(function (file) {
+    return grunt.file.isFile(file);
+  });
+
+  grunt.log.debug('Source files: ', src);
+  if (src.length === 0) {
+    grunt.log.debug(JSON.stringify(filesObj.orig));
+    return false;
+  }
+
+  if (typeof filesObj.dest !== 'string') {
+    grunt.log.debug(JSON.stringify(filesObj.orig));
+    return false;
+  }
+
+  return src;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param task
+ * @returns {Array}
+ */
+AbstractVersioner.prototype.retrieveDestFiles = function (task) {
+  var destFiles = [];
+  var filesMapLength = task.taskFiles.length;
+  task.taskFiles.forEach(function(f, index) {
+    if (!this.<span class="apidocCodeKeywordSpan">checkFilesObjValidity</span>(f, index, filesMapLength)) { return false; }
+    destFiles.push(f.dest);
+  }.bind(this));
+  if (destFiles.length === 0) {
+    grunt.fail.warn("Task '" + task.taskName + "' has no destination files!");
+  }
+  return destFiles;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.createPostVersioningTask" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.createPostVersioningTask">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>createPostVersioningTask
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createPostVersioningTask = function () {
+  var intermediateDestFiles = _.flatten(this.getTargetTasks().map(this.retrieveDestFiles.bind(this)));
+  grunt.log.debug("Retrieved all destination files: " + intermediateDestFiles.join(', '));
+  var filesArray = intermediateDestFiles.map(function (destFile) {
+    return {src: [destFile], dest: destFile};
+  });
+  var task = new TaskClass(this.getAssetsVersioningTaskName(), filesArray);
+  return task.createPostVersioningTask(filesArray);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+AbstractVersioner.prototype.createPostVersioningTask = function () {
+  var intermediateDestFiles = _.flatten(this.getTargetTasks().map(this.retrieveDestFiles.bind(this)));
+  grunt.log.debug("Retrieved all destination files: " + intermediateDestFiles.join(', '));
+  var filesArray = intermediateDestFiles.map(function (destFile) {
+    return {src: [destFile], dest: destFile};
+  });
+  var task = new TaskClass(this.getAssetsVersioningTaskName(), filesArray);
+  return task.<span class="apidocCodeKeywordSpan">createPostVersioningTask</span>(filesArray);
+};
+
+/**
+ * Get the assets versioning task name (for example assets_versioning:mytask)
+ * @returns {string}
+ */
+AbstractVersioner.prototype.getAssetsVersioningTaskName = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.createPreVersioningSurrogateTask" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.createPreVersioningSurrogateTask">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>createPreVersioningSurrogateTask
+        <span class="apidocSignatureSpan">(task)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createPreVersioningSurrogateTask = function (task) {
+
+  var updatedTaskFiles = [];
+  var allVersionedPath = [];
+
+  var filesMapLength = task.taskFiles.length;
+  var filesMapSkipCount = 0;
+  task.taskFiles.forEach(function(taskFilesObj, index) {
+    var src = this.checkFilesObjValidity(taskFilesObj, index, filesMapLength);
+    if (!src) {
+      filesMapSkipCount++;
+      return false;
+    }
+
+    var version = this.versionTagger(src, this.options);
+    grunt.log.debug('Version tag (' + this.options.tag + '): ' + version);
+
+    if (version === '') {
+      grunt.fail.warn("Failed at generating a version tag for " + taskFilesObj.dest, 1);
+      return false;
+    }
+
+    var destFilePath = this.options.versionize.call(this, taskFilesObj.dest, version);
+    grunt.log.debug('Destination filename: ' + destFilePath);
+
+    // push to the map of versions
+
+    var versionedPath = destFilePath.replace(this.options.versionsMapTrimPath, '');
+    if (_.contains(allVersionedPath, versionedPath)) {
+      grunt.fail.warn("Duplicate versioned path detected: '" + versionedPath +"'.");
+    } else {
+      allVersionedPath.push(versionedPath);
+      this.versionsMap.push({
+        version: version,
+        originalPath: taskFilesObj.dest.replace(this.options.versionsMapTrimPath, ''),
+        versionedPath: slash(versionedPath)
+      });
+    }
+
+    // check if file already exists
+    if (this.options.skipExisting === true) {
+      grunt.log.debug('options.skipExisting is true, checking if destination file already exists.');
+      if (grunt.file.exists(destFilePath)) {
+        grunt.log.debug('Destination file already exists. Task skipped.');
+        return false;
+      }
+      grunt.log.debug("Destination file doesn't exist. Task will be processed.");
+    } else if (Array.isArray(this.options.skipExisting)) {
+      if (this.options.skipExisting.indexOf(destFilePath) !== -1) {
+        grunt.log.debug('Destination file listed in options.skipExisting. Task skipped');
+        return false;
+      }
+      grunt.log.debug("Destination file not list in options.skipExisting. Task will be processed.");
+    }
+
+    // log the src and dest data
+    updatedTaskFiles.push({ src: src, dest: destFilePath });
+
+  }.bind(this));
+
+  if (filesMapSkipCount === filesMapLength) {
+    grunt.fail.warn("File configuration for Task '" + task.taskName + "' is incorrect. Missing valid source files and/or destination
+ files!");
+  }
+
+  grunt.log.debug("Versioned Files Object: ", updatedTaskFiles);
+
+  return this.createSurrogateTask(updatedTaskFiles, task);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.createSurrogateTask" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.createSurrogateTask">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>createSurrogateTask
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSurrogateTask = function () {
+  throw new Error('Should be implemented by the subclass');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (filesMapSkipCount === filesMapLength) {
+    grunt.fail.warn("File configuration for Task '" + task.taskName + "' is incorrect. Missing valid source
+ files and/or destination files!");
+  }
+
+  grunt.log.debug("Versioned Files Object: ", updatedTaskFiles);
+
+  return this.<span class="apidocCodeKeywordSpan">createSurrogateTask</span>(updatedTaskFiles, task);
+};
+
+/**
+ * Save the versions map to a grunt configuration variable
+ * and also optionally to a file
+ */
+AbstractVersioner.prototype.saveVersionsMap = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.doVersion" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.doVersion">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>doVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doVersion = function () {
+  throw new Error('Should be implemented by the subclass');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getAssetsVersioningTaskConfigKey" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getAssetsVersioningTaskConfigKey">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getAssetsVersioningTaskConfigKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAssetsVersioningTaskConfigKey = function () {
+  return this.taskData.name + '.' + this.taskData.target;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  /**
+   * Get one of the tagger functions: hash or date
+   * @type {function}
+   */
+  this.versionTagger = taggers[this.options.tag];
+
+  // is task a post versioning task?
+  this.isPostVersioningTask = grunt.config(this.<span class="apidocCodeKeywordSpan">getAssetsVersioningTaskConfigKey</span>() + &amp;#
+x27;.isPostVersioningTaskFor');
+}
+
+/**
+ * Initiliaze the task
+ * @abstract
+ */
+AbstractVersioner.prototype.initialize = function () {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getAssetsVersioningTaskName" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getAssetsVersioningTaskName">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getAssetsVersioningTaskName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAssetsVersioningTaskName = function () {
+  return this.taskData.name + ':' + this.taskData.target;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+AbstractVersioner.prototype.createPostVersioningTask = function () {
+ var intermediateDestFiles = _.flatten(this.getTargetTasks().map(this.retrieveDestFiles.bind(this)));
+ grunt.log.debug("Retrieved all destination files: " + intermediateDestFiles.join(', '));
+ var filesArray = intermediateDestFiles.map(function (destFile) {
+   return {src: [destFile], dest: destFile};
+ });
+ var task = new TaskClass(this.<span class="apidocCodeKeywordSpan">getAssetsVersioningTaskName</span>(), filesArray);
+ return task.createPostVersioningTask(filesArray);
+};
+
+/**
+* Get the assets versioning task name (for example assets_versioning:mytask)
+* @returns {string}
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getPostVersioningSurrogateTasks" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getPostVersioningSurrogateTasks">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getPostVersioningSurrogateTasks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPostVersioningSurrogateTasks = function () {
+  throw new Error('Should be implemented by the subclass');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Set the property surrogateTasks
+ */
+AbstractVersioner.prototype.setSurrogateTasks = function () {
+  if (this.options.post) {
+    grunt.log.debug("Post-Versioning Mode");
+    this.surrogateTasks = this.<span class="apidocCodeKeywordSpan">getPostVersioningSurrogateTasks</span>();
+  } else {
+    grunt.log.debug("Pre-Versioning Mode");
+    this.surrogateTasks = this.getPreVersioningSurrogateTasks();
+  }
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getPreVersioningSurrogateTasks" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getPreVersioningSurrogateTasks">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getPreVersioningSurrogateTasks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPreVersioningSurrogateTasks = function () {
+  return this.getTargetTasks().map(this.createPreVersioningSurrogateTask.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+AbstractVersioner.prototype.setSurrogateTasks = function () {
+ if (this.options.post) {
+   grunt.log.debug("Post-Versioning Mode");
+   this.surrogateTasks = this.getPostVersioningSurrogateTasks();
+ } else {
+   grunt.log.debug("Pre-Versioning Mode");
+   this.surrogateTasks = this.<span class="apidocCodeKeywordSpan">getPreVersioningSurrogateTasks</span>();
+ }
+};
+
+/**
+* Create or gather all Surrogate Tasks for the post versioning mode
+* @abstract
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getTargetTasks" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.getTargetTasks">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>getTargetTasks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTargetTasks = function () {
+  throw new Error('Should be implemented by the subclass');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+/**
+ * Create or gather all surrogate tasks for the pre versioning mode
+ * @returns {Array} Array of tasks names
+ */
+AbstractVersioner.prototype.getPreVersioningSurrogateTasks = function () {
+  return this.<span class="apidocCodeKeywordSpan">getTargetTasks</span>().map(this.createPreVersioningSurrogateTask.bind(this));
+};
+
+/**
+ * Create the Post Versioning Task
+ * @returns {string}
+ */
+AbstractVersioner.prototype.createPostVersioningTask = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.initialize" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.initialize">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>initialize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.retrieveDestFiles" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.retrieveDestFiles">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>retrieveDestFiles
+        <span class="apidocSignatureSpan">(task)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">retrieveDestFiles = function (task) {
+  var destFiles = [];
+  var filesMapLength = task.taskFiles.length;
+  task.taskFiles.forEach(function(f, index) {
+    if (!this.checkFilesObjValidity(f, index, filesMapLength)) { return false; }
+    destFiles.push(f.dest);
+  }.bind(this));
+  if (destFiles.length === 0) {
+    grunt.fail.warn("Task '" + task.taskName + "' has no destination files!");
+  }
+  return destFiles;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.saveVersionsMap" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.saveVersionsMap">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>saveVersionsMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveVersionsMap = function () {
+  if (this.options.post) { return; }
+  if (typeof this.options.versionsMapFile === "string") {
+    var versionsMapContent;
+
+    // Are we generating a json file or are we using a template file?
+    var templateFile = this.options.versionsMapTemplate;
+    if (typeof templateFile === "string") {
+      if (!grunt.file.exists(templateFile)) {
+
+      }
+      var template = grunt.util.normalizelf(grunt.file.read(templateFile, 'utf8'));
+      versionsMapContent = grunt.template.process(template, {
+        data: {
+          files: this.versionsMap
+        }
+      }).replace(/[\n]{2}/g,"\n");
+    } else {
+      versionsMapContent = JSON.stringify(this.versionsMap);
+    }
+    grunt.file.write(this.options.versionsMapFile, versionsMapContent);
+  }
+
+  grunt.config.set(this.getAssetsVersioningTaskConfigKey() + '.versionsMap', this.versionsMap);
+  //var originalTask = grunt.config(this.getAssetsVersioningTaskConfigKey() + '.isPostVersioningTaskFor');
+  //if (typeof originalTask === 'string') {
+  //  grunt.config.set(originalTask + '.versionsMap', this.versionsMap);
+  //}
+
+  if (typeof this.isPostVersioningTask  === 'string') {
+    grunt.config.set(this.isPostVersioningTask + '.versionsMap', this.versionsMap);
+  }
+
+  grunt.log.debug("Versions Map: ", this.versionsMap);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Do the actual versioning
+*/
+ExternalVersioner.prototype.doVersion = function () {
+ if (this.options.runTask) {
+   grunt.verbose.writeln("Tasks triggered: '" + this.surrogateTasks.join(", ") + "'");
+   grunt.task.run(this.surrogateTasks);
+   this.<span class="apidocCodeKeywordSpan">saveVersionsMap</span>();
+ }
+};
+
+/**
+* Create a surrogate task
+* @param {Array} updatedTaskFiles
+* @param task
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.setSurrogateTasks" id="apidoc.element.grunt-assets-versioning.abstractVersioner.prototype.setSurrogateTasks">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.abstractVersioner.prototype.</span>setSurrogateTasks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSurrogateTasks = function () {
+  if (this.options.post) {
+    grunt.log.debug("Post-Versioning Mode");
+    this.surrogateTasks = this.getPostVersioningSurrogateTasks();
+  } else {
+    grunt.log.debug("Pre-Versioning Mode");
+    this.surrogateTasks = this.getPreVersioningSurrogateTasks();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+ExternalVersioner.prototype.initialize = function () {
+  // display a warning if both assets versioning and target tasks have a file configuration object
+  if (this.taskData.data.files != null) {
+    grunt.log.error("Files passed to '" + this.getAssetsVersioningTaskName() + "' won't be versioned
+.");
+  }
+
+  this.<span class="apidocCodeKeywordSpan">setSurrogateTasks</span>();
+};
+
+/**
+ * get Post Versioning Tasks
+ * @returns {*}
+ */
+ExternalVersioner.prototype.getPostVersioningSurrogateTasks = function () {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning.externalVersioner" id="apidoc.module.grunt-assets-versioning.externalVersioner">module grunt-assets-versioning.externalVersioner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.externalVersioner.externalVersioner" id="apidoc.element.grunt-assets-versioning.externalVersioner.externalVersioner">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>externalVersioner
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">externalVersioner = function () {
+  return Parent.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning.externalVersioner.prototype" id="apidoc.module.grunt-assets-versioning.externalVersioner.prototype">module grunt-assets-versioning.externalVersioner.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.constructor" id="apidoc.element.grunt-assets-versioning.externalVersioner.prototype.constructor">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructor = function () {
+  return Parent.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.createSurrogateTask" id="apidoc.element.grunt-assets-versioning.externalVersioner.prototype.createSurrogateTask">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>createSurrogateTask
+        <span class="apidocSignatureSpan">(updatedTaskFiles, task)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSurrogateTask = function (updatedTaskFiles, task) {
+  return task.createSurrogate(updatedTaskFiles);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (filesMapSkipCount === filesMapLength) {
+    grunt.fail.warn("File configuration for Task '" + task.taskName + "' is incorrect. Missing valid source
+ files and/or destination files!");
+  }
+
+  grunt.log.debug("Versioned Files Object: ", updatedTaskFiles);
+
+  return this.<span class="apidocCodeKeywordSpan">createSurrogateTask</span>(updatedTaskFiles, task);
+};
+
+/**
+ * Save the versions map to a grunt configuration variable
+ * and also optionally to a file
+ */
+AbstractVersioner.prototype.saveVersionsMap = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.doVersion" id="apidoc.element.grunt-assets-versioning.externalVersioner.prototype.doVersion">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>doVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doVersion = function () {
+  if (this.options.runTask) {
+    grunt.verbose.writeln("Tasks triggered: '" + this.surrogateTasks.join(", ") + "'");
+    grunt.task.run(this.surrogateTasks);
+    this.saveVersionsMap();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.getPostVersioningSurrogateTasks" id="apidoc.element.grunt-assets-versioning.externalVersioner.prototype.getPostVersioningSurrogateTasks">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>getPostVersioningSurrogateTasks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPostVersioningSurrogateTasks = function () {
+  return this.options.tasks.concat([this.createPostVersioningTask()]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Set the property surrogateTasks
+ */
+AbstractVersioner.prototype.setSurrogateTasks = function () {
+  if (this.options.post) {
+    grunt.log.debug("Post-Versioning Mode");
+    this.surrogateTasks = this.<span class="apidocCodeKeywordSpan">getPostVersioningSurrogateTasks</span>();
+  } else {
+    grunt.log.debug("Pre-Versioning Mode");
+    this.surrogateTasks = this.getPreVersioningSurrogateTasks();
+  }
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.getTargetTasks" id="apidoc.element.grunt-assets-versioning.externalVersioner.prototype.getTargetTasks">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>getTargetTasks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTargetTasks = function () {
+  return this.options.tasks.map(function (taskName) {
+    return new TaskClass(taskName);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+/**
+ * Create or gather all surrogate tasks for the pre versioning mode
+ * @returns {Array} Array of tasks names
+ */
+AbstractVersioner.prototype.getPreVersioningSurrogateTasks = function () {
+  return this.<span class="apidocCodeKeywordSpan">getTargetTasks</span>().map(this.createPreVersioningSurrogateTask.bind(this));
+};
+
+/**
+ * Create the Post Versioning Task
+ * @returns {string}
+ */
+AbstractVersioner.prototype.createPostVersioningTask = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.externalVersioner.prototype.initialize" id="apidoc.element.grunt-assets-versioning.externalVersioner.prototype.initialize">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.externalVersioner.prototype.</span>initialize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function () {
+  // display a warning if both assets versioning and target tasks have a file configuration object
+  if (this.taskData.data.files != null) {
+    grunt.log.error("Files passed to '" + this.getAssetsVersioningTaskName() + "' won't be versioned.");
+  }
+
+  this.setSurrogateTasks();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning.index" id="apidoc.module.grunt-assets-versioning.index">module grunt-assets-versioning.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.index.date" id="apidoc.element.grunt-assets-versioning.index.date">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.index.</span>date
+        <span class="apidocSignatureSpan">(src, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">date = function (src, options) {
+
+  var lastMtime = src.map(function(filepath){
+    return +fs.statSync(filepath).mtime;
+  }).sort().pop();
+  return moment(lastMtime).utcOffset(-options.timezoneOffset).format(options.dateFormat);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.index.hash" id="apidoc.element.grunt-assets-versioning.index.hash">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.index.</span>hash
+        <span class="apidocSignatureSpan">(src, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hash = function (src, options) {
+  var hash = '';
+
+  src.forEach(function(f){
+    hash += crypto.createHash('md5').update(fs.readFileSync(f, options.encoding)).digest('hex');
+  });
+  if (src.length &gt; 1){
+    hash = crypto.createHash('md5').update(hash).digest('hex');
+  }
+  var hashLength = parseInt(options.hashLength, 10);
+
+  // can't use typeof since typeof NaN == 'number'
+  if (Object.prototype.toString.call(hashLength) === '[object Number]') {
+    hash = hash.substr(0, options.hashLength);
+  }
+
+  return hash;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning.internalVersioner" id="apidoc.module.grunt-assets-versioning.internalVersioner">module grunt-assets-versioning.internalVersioner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.internalVersioner.internalVersioner" id="apidoc.element.grunt-assets-versioning.internalVersioner.internalVersioner">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>internalVersioner
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">internalVersioner = function () {
+  return Parent.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning.internalVersioner.prototype" id="apidoc.module.grunt-assets-versioning.internalVersioner.prototype">module grunt-assets-versioning.internalVersioner.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype._copyOrConcat" id="apidoc.element.grunt-assets-versioning.internalVersioner.prototype._copyOrConcat">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>_copyOrConcat
+        <span class="apidocSignatureSpan">(files)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_copyOrConcat = function (files) {
+  files.forEach(function (filesObj)  {
+    // if only one file, copy it
+    // otherwise concatenate the content
+    if (filesObj.src.length === 1) {
+      grunt.file.copy(filesObj.src[0], filesObj.dest);
+      if (this.isPostVersioningTask) {
+        grunt.file.delete(filesObj.src[0]);
+        grunt.log.debug("Deleted intermediate destination file: " + filesObj.src[0]);
+      }
+    } else {
+      var content = filesObj.src.map(function (filepath) {
+        return grunt.file.read(filepath);
+      }).join(grunt.util.linefeed);
+
+      grunt.file.write(filesObj.dest, content);
+    }
+
+    grunt.log.writeln('File ' + filesObj.dest + ' created.');
+
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.saveVersionsMap();
+
+  if (this.surrogateTasks.length !== 1) {
+    grunt.log.error('There should be only one surrogate task in internal mode.');
+  }
+
+  if (this.options.post) {
+    this.<span class="apidocCodeKeywordSpan">_copyOrConcat</span>(this.getTargetTasks()[0].taskFiles);
+    grunt.task.run(this.surrogateTasks);
+  } else {
+    this._copyOrConcat(this.surrogateTasks[0].files);
+  }
+
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.constructor" id="apidoc.element.grunt-assets-versioning.internalVersioner.prototype.constructor">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructor = function () {
+  return Parent.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.createSurrogateTask" id="apidoc.element.grunt-assets-versioning.internalVersioner.prototype.createSurrogateTask">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>createSurrogateTask
+        <span class="apidocSignatureSpan">(updatedTaskFiles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSurrogateTask = function (updatedTaskFiles) {
+  return { files: updatedTaskFiles };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (filesMapSkipCount === filesMapLength) {
+    grunt.fail.warn("File configuration for Task '" + task.taskName + "' is incorrect. Missing valid source
+ files and/or destination files!");
+  }
+
+  grunt.log.debug("Versioned Files Object: ", updatedTaskFiles);
+
+  return this.<span class="apidocCodeKeywordSpan">createSurrogateTask</span>(updatedTaskFiles, task);
+};
+
+/**
+ * Save the versions map to a grunt configuration variable
+ * and also optionally to a file
+ */
+AbstractVersioner.prototype.saveVersionsMap = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.doVersion" id="apidoc.element.grunt-assets-versioning.internalVersioner.prototype.doVersion">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>doVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doVersion = function () {
+  this.saveVersionsMap();
+
+  if (this.surrogateTasks.length !== 1) {
+    grunt.log.error('There should be only one surrogate task in internal mode.');
+  }
+
+  if (this.options.post) {
+    this._copyOrConcat(this.getTargetTasks()[0].taskFiles);
+    grunt.task.run(this.surrogateTasks);
+  } else {
+    this._copyOrConcat(this.surrogateTasks[0].files);
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.getPostVersioningSurrogateTasks" id="apidoc.element.grunt-assets-versioning.internalVersioner.prototype.getPostVersioningSurrogateTasks">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>getPostVersioningSurrogateTasks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPostVersioningSurrogateTasks = function () {
+  return [this.createPostVersioningTask()];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Set the property surrogateTasks
+ */
+AbstractVersioner.prototype.setSurrogateTasks = function () {
+  if (this.options.post) {
+    grunt.log.debug("Post-Versioning Mode");
+    this.surrogateTasks = this.<span class="apidocCodeKeywordSpan">getPostVersioningSurrogateTasks</span>();
+  } else {
+    grunt.log.debug("Pre-Versioning Mode");
+    this.surrogateTasks = this.getPreVersioningSurrogateTasks();
+  }
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.getTargetTasks" id="apidoc.element.grunt-assets-versioning.internalVersioner.prototype.getTargetTasks">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>getTargetTasks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTargetTasks = function () {
+  return [new TaskClass(this.getAssetsVersioningTaskName(), this.taskData.files)];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+/**
+ * Create or gather all surrogate tasks for the pre versioning mode
+ * @returns {Array} Array of tasks names
+ */
+AbstractVersioner.prototype.getPreVersioningSurrogateTasks = function () {
+  return this.<span class="apidocCodeKeywordSpan">getTargetTasks</span>().map(this.createPreVersioningSurrogateTask.bind(this));
+};
+
+/**
+ * Create the Post Versioning Task
+ * @returns {string}
+ */
+AbstractVersioner.prototype.createPostVersioningTask = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.internalVersioner.prototype.initialize" id="apidoc.element.grunt-assets-versioning.internalVersioner.prototype.initialize">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.internalVersioner.prototype.</span>initialize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function () {
+  // if internal task is a post versioning internal task
+  //this.isPostVersioningTask = grunt.config(this.getAssetsVersioningTaskConfigKey() + '.isPostVersioningTaskFor');
+  this.setSurrogateTasks();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning.task" id="apidoc.module.grunt-assets-versioning.task">module grunt-assets-versioning.task</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.task.task" id="apidoc.element.grunt-assets-versioning.task.task">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.</span>task
+        <span class="apidocSignatureSpan">(taskName, taskFiles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">task = function (taskName, taskFiles) {
+  grunt.log.writeln("Versioning files from " + taskName + " task.");
+  this.taskName = taskName;
+
+  this.taskConfig = this.getTaskConfig();
+
+  if (!this.taskConfig) {
+    grunt.fail.warn("Task '" + this.taskName + "' doesn't exist or doesn't have any configuration.", 1);
+  }
+
+  this.taskFiles = taskFiles || this.getFiles();
+  if (!this.taskFiles || this.taskFiles.length === 0) {
+    grunt.fail.warn("Task '" + this.taskName + "' doesn't have any src-dest file mappings.", 1);
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-assets-versioning.task.prototype" id="apidoc.module.grunt-assets-versioning.task.prototype">module grunt-assets-versioning.task.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.task.prototype.createPostVersioningTask" id="apidoc.element.grunt-assets-versioning.task.prototype.createPostVersioningTask">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>createPostVersioningTask
+        <span class="apidocSignatureSpan">(filesObj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createPostVersioningTask = function (filesObj) {
+  var postTask = this.taskName + postSuffix;
+  var taskConfigKey = this.getTaskConfigKey(postTask);
+
+  if (grunt.config(taskConfigKey)) {
+    grunt.fail.warn("Task '" + postTask + "' already exists!");
+  }
+
+  var postTaskConfig = this.taskConfig;
+  // remove src &amp; dest keys as they take precedence over the files key
+  delete postTaskConfig.src;
+  delete postTaskConfig.dest;
+  postTaskConfig.options = postTaskConfig.options || {};
+  postTaskConfig.options.post = false;
+  postTaskConfig.options.tasks = false;
+  postTaskConfig.isPostVersioningTaskFor = this.getTaskConfigKey();
+  postTaskConfig.files = filesObj;
+
+  grunt.config.set(taskConfigKey, postTaskConfig);
+  grunt.log.debug("Created Post Versioning Task '" + taskConfigKey + "'");
+  grunt.log.debug("Post Versioning Task config: " + JSON.stringify(postTaskConfig));
+
+  return this.taskName + postSuffix;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+AbstractVersioner.prototype.createPostVersioningTask = function () {
+  var intermediateDestFiles = _.flatten(this.getTargetTasks().map(this.retrieveDestFiles.bind(this)));
+  grunt.log.debug("Retrieved all destination files: " + intermediateDestFiles.join(', '));
+  var filesArray = intermediateDestFiles.map(function (destFile) {
+    return {src: [destFile], dest: destFile};
+  });
+  var task = new TaskClass(this.getAssetsVersioningTaskName(), filesArray);
+  return task.<span class="apidocCodeKeywordSpan">createPostVersioningTask</span>(filesArray);
+};
+
+/**
+ * Get the assets versioning task name (for example assets_versioning:mytask)
+ * @returns {string}
+ */
+AbstractVersioner.prototype.getAssetsVersioningTaskName = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.task.prototype.createSurrogate" id="apidoc.element.grunt-assets-versioning.task.prototype.createSurrogate">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>createSurrogate
+        <span class="apidocSignatureSpan">(filesObj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSurrogate = function (filesObj) {
+  var surrogateTask = this.taskName + surrogateSuffix;
+  var surrogateTaskConfigKey = this.getTaskConfigKey(surrogateTask);
+
+  if (grunt.config(surrogateTaskConfigKey)) {
+    grunt.fail.warn("Task '" + surrogateTask + "' already exists!");
+  }
+
+  var surrogateTaskConfig = this.taskConfig;
+  // remove src &amp; dest keys as they take precedence over the files key
+  delete surrogateTaskConfig.src;
+  delete surrogateTaskConfig.dest;
+  surrogateTaskConfig.files = filesObj;
+
+  grunt.config.set(surrogateTaskConfigKey, surrogateTaskConfig);
+  grunt.log.debug("Created surrogateTask '" + surrogateTaskConfigKey + "'");
+  grunt.log.debug("Surrogate Task config: " + JSON.stringify(surrogateTaskConfig));
+
+  return surrogateTask;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Create a surrogate task
+ * @param {Array} updatedTaskFiles
+ * @param task
+ * @returns {surrogateTask}
+ */
+ExternalVersioner.prototype.createSurrogateTask = function (updatedTaskFiles, task) {
+  return task.<span class="apidocCodeKeywordSpan">createSurrogate</span>(updatedTaskFiles);
+};
+
+module.exports = ExternalVersioner;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.task.prototype.getFiles" id="apidoc.element.grunt-assets-versioning.task.prototype.getFiles">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>getFiles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFiles = function () {
+  return grunt.task.normalizeMultiTaskFiles(this.taskConfig);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  this.taskConfig = this.getTaskConfig();
+
+  if (!this.taskConfig) {
+    grunt.fail.warn("Task '" + this.taskName + "' doesn't exist or doesn't have any configuration
+.", 1);
+  }
+
+  this.taskFiles = taskFiles || this.<span class="apidocCodeKeywordSpan">getFiles</span>();
+  if (!this.taskFiles || this.taskFiles.length === 0) {
+    grunt.fail.warn("Task '" + this.taskName + "' doesn't have any src-dest file mappings.",
+1);
+  }
+
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.task.prototype.getTaskConfig" id="apidoc.element.grunt-assets-versioning.task.prototype.getTaskConfig">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>getTaskConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTaskConfig = function () {
+  return grunt.config(this.getTaskConfigKey());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Array} [taskFiles]
+ * @constructor
+ */
+var Task = function (taskName, taskFiles) {
+grunt.log.writeln("Versioning files from " + taskName + " task.");
+this.taskName = taskName;
+
+this.taskConfig = this.<span class="apidocCodeKeywordSpan">getTaskConfig</span>();
+
+if (!this.taskConfig) {
+  grunt.fail.warn("Task '" + this.taskName + "' doesn't exist or doesn't have any configuration
+.", 1);
+}
+
+this.taskFiles = taskFiles || this.getFiles();
+if (!this.taskFiles || this.taskFiles.length === 0) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-assets-versioning.task.prototype.getTaskConfigKey" id="apidoc.element.grunt-assets-versioning.task.prototype.getTaskConfigKey">
+        function <span class="apidocSignatureSpan">grunt-assets-versioning.task.prototype.</span>getTaskConfigKey
+        <span class="apidocSignatureSpan">(taskName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTaskConfigKey = function (taskName) {
+  taskName = taskName || this.taskName;
+  return taskName.replace(':', '.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+/**
+ * Get the task configuration
+ * @returns {Object}
+ */
+Task.prototype.getTaskConfig = function () {
+  return grunt.config(this.<span class="apidocCodeKeywordSpan">getTaskConfigKey</span>());
+};
+
+/**
+ * Get the task configuration key
+ * @returns {string}
+ */
+Task.prototype.getTaskConfigKey = function (taskName) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
